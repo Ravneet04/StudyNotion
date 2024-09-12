@@ -1,31 +1,57 @@
-# React & Tailwind CSS Starter Pack
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+# StudyNotion
 
-## Usage
+Live Link: https://study-notion-rouge.vercel.app/
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+StudyNotion is a comprehensive ed-tech platform designed to provide users with the ability to create, consume, and rate educational content. Built using the MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS), it aims to deliver an interactive learning experience for students and a space for instructors to share their expertise. The platform offers features such as course management, media handling, and payment integration, creating a seamless and engaging experience for all users..
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+### Prerequisites
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+Requirements for the software and other tools to build, test, and push:
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+1. Node.js (v14+)
+2. MongoDB
+3. React
+4. npm
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+## Deployment
 
-## Contributing
+Deployment
+Additional notes on how to deploy this project on a live system:
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+1. Frontend Deployment: Deployed using Vercel.
+2. Backend Deployment: Hosted on services like Render or Railway.
+3. Database: Hosted on MongoDB Atlas.
+4. Media Handling: Media files are managed via Cloudinary
+
+## Built With
+
+1. Node.js - Backend framework
+2. Express.js - Web framework for Node.js
+3. ReactJS - Frontend library for building UI
+MongoDB - NoSQL database
+4. Cloudinary - Media storage and management
+5. Vercel - Hosting platform for the frontend
+
+## Features
+## For Students:
+1. Browse and enroll in courses
+2. Rate courses
+3. Manage Wishlist and Cart
+4. Consume course content (videos, PDFs, etc.)
+5. Manage user profile
+## For Instructors:
+1. Create, update, and manage courses
+2. View course analytics
+3. Manage user profiles
+## For Admin (Future Enhancements):
+1. Platform insights and metrics
+2. Manage instructors and students
+
+## Future Enhancements
+1. Gamification (badges, leaderboards)
+2. Personalized learning paths
+3. Mobile app
+4. Machine learning-powered course recommendations
+5. Virtual/augmented reality integration
+
