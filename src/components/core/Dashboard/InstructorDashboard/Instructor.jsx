@@ -86,7 +86,7 @@ const Instructor = () => {
             <div className=' my-4 flex items-start space-x-6'>
                 {
                     courses.slice(0,3).map((course) => (
-                        <div>
+                        <div key={course._id}>
                             <img src={course.thumbnail}
                                 className='h-[201px] w-full rounded-md object-cover'
                             />

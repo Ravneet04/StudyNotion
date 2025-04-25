@@ -1,9 +1,10 @@
 import "./App.css";
+import React from "react";
+import { useEffect } from "react";
 import {Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/Home"
 import Navbar from "./components/common/Navbar"
 import OpenRoute from "./components/core/Auth/OpenRoute"
-
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import ForgotPassword from "./pages/ForgotPassword";
@@ -30,14 +31,43 @@ import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
 import { useState } from "react";
 import Menu from "./components/common/Menu";
+import env from "react-dotenv";
+import TestCard from "./components/common/TestCard";
+import ide from "./components/core/Dashboard/Editor";
+import Editor from "./components/core/Dashboard/Editor";
+import Mock from "./components/core/Dashboard/Mock";
+import Help from "./components/core/Dashboard/Help";
+import ComingSoon from "./components/common/ComingSoon";
+import Interview from "./components/core/Dashboard/Interview";
+import ChatAi from "./components/core/Dashboard/ChatAi";
+//import Input from "./components/core/Dashboard/Resume-Builder/Components/Input";
+//import Selecttheme from "./components/core/Dashboard/Resume-Builder/Components/Selecttheme";
+
+function LegacyRedirect() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Open legacy app in new tab
+    window.open("/ide", "_blank");
+
+    // Go back to /editor in the current tab
+    navigate("/dashboard/Editor");
+  }, [navigate]);
+
+  return null;
+}
 
 function App() {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
   const { user } = useSelector((state) => state.profile)
   const[open,setopen] = useState(false);
+
+  const app3 = process.env.REACT_APP_BASE_URL;
+  console.log("razorpay",process.env.REACT_APP_RAZORPAY_KEY)
+  console.log("url",app3);
+  // console.log("key",env.RAZORPAY_KEY);
 
 
   return (
@@ -111,13 +141,19 @@ function App() {
     >
       <Route path="dashboard/my-profile" element={<MyProfile />} />
       <Route path="dashboard/Settings" element={<Settings />} />
-      
+      <Route path="dashboard/help" element={<Help />} />
 
       {
         user?.accountType === ACCOUNT_TYPE.STUDENT && (
           <>
           <Route path="dashboard/cart" element={<Cart />} />
           <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
+          <Route path="dashboard/Editor" element={<Editor />} />
+          {/* <Route path="dashboard/Mocks" element={<Mock />} /> */}
+          <Route path="dashboard/Practice" element={<ChatAi />} />
+          <Route path="dashboard/Interview" element={<Interview/>} />
+          <Route path="/Ide" element={<LegacyRedirect />}/>
+          
           </>
         )
       }

@@ -265,12 +265,14 @@ exports.changePassword = async (req, res) => {
 		);
 
 		// Send notification email
+		console.log("updatedUserDetails",updatedUserDetails)
 		try {
 			const emailResponse = await mailSender(
 				updatedUserDetails.email,
+				`Password updated successfully for ${updatedUserDetails.firstName} ${updatedUserDetails.lastName}`,
 				passwordUpdated(
 					updatedUserDetails.email,
-					`Password updated successfully for ${updatedUserDetails.firstName} ${updatedUserDetails.lastName}`
+					updatedUserDetails.firstName
 				)
 			);
 			console.log("Email sent successfully:", emailResponse.response);

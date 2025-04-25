@@ -5,7 +5,6 @@ const User = require("../models/User");
 //auth
 exports.auth = async (req, res, next) => {
     try{
-
         console.log("BEFORE ToKEN EXTRACTION");
         //extract token
         const token = req.cookies.token 

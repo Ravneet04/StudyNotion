@@ -1,3 +1,4 @@
+const { passwordReset } = require("../mail/templates/resetPassword");
 const User = require("../models/User");
 const mailSender = require("../utils/mailSender");
 const bcrypt = require("bcrypt");
@@ -30,7 +31,10 @@ exports.resetPasswordToken = async (req, res) => {
 		await mailSender(
 			email,
 			"Password Reset",
-			`Your Link for email verification is ${url}. Please click this url to reset your password.`
+			passwordReset(
+				email,
+				url,
+			)
 		);
 
 		res.json({
@@ -48,6 +52,7 @@ exports.resetPasswordToken = async (req, res) => {
 };
 
 exports.resetPassword = async (req, res) => {
+
 	try {
 		const { password, confirmPassword, token } = req.body;
 

@@ -16,7 +16,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="lg:w-[60%]">
-          <ContactForm />
+          <ContactForm Heading={"Got an idea? We've got the skills. Let's team up!"} para={"Tell us more about yourself and what you&apos;re got in mind."} />
         </div>
       </div>
       <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">

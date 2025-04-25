@@ -1,4 +1,4 @@
-exports.passwordUpdated = (email, name) => {
+exports.passwordUpdated = (email,name) => {
 	return `<!DOCTYPE html>
     <html>
     
@@ -56,10 +56,10 @@ exports.passwordUpdated = (email, name) => {
     <body>
         <div class="container">
             <a href="https://studynotion-edtech-project.vercel.app"><img class="logo"
-                    src="https://i.ibb.co/7Xyj3PC/logo.png" alt="StudyNotion Logo"></a>
+                    src="https://i.ibb.co/m59ZmTC1/rzp-logo.png" alt="StudyNotion Logo"></a>
             <div class="message">Password Update Confirmation</div>
             <div class="body">
-                <p>Hey ${name},</p>
+                <p>Hey,</p>
                 <p>Your password has been successfully updated for the email <span class="highlight">${email}</span>.
                 </p>
                 <p>If you did not request this password change, please contact us immediately to secure your account.</p>

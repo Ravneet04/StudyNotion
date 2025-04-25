@@ -1,4 +1,4 @@
-import * as Icons from "react-icons/vsc"
+import Icons from "./Icons";  
 import { useDispatch } from "react-redux"
 import { NavLink, matchPath, useLocation } from "react-router-dom"
 

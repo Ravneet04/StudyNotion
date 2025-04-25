@@ -41,4 +41,32 @@ export const sidebarLinks = [
     type: ACCOUNT_TYPE.STUDENT,
     icon: "VscHistory",
   },
+  {
+    id: 7,
+    name: "Code Editor",
+    path: "/dashboard/Editor",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "VscCode",
+  },
+  // {
+  //   id: 8,
+  //   name: "Mock Tests",
+  //   path: "/dashboard/Mocks",
+  //   type: ACCOUNT_TYPE.STUDENT,
+  //   icon: "VscBook",
+  // },
+  {
+    id: 9,
+    name: "StudyBot",
+    path: "/dashboard/Practice",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "AiFillRobot",
+  },
+  {
+    id: 10,
+    name: "AI-Interview",
+    path: "/dashboard/Interview",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "FaChalkboardTeacher",
+  },
 ];
