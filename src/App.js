@@ -48,7 +48,7 @@ function LegacyRedirect() {
 
   useEffect(() => {
     // Open legacy app in new tab
-    window.open("/ide", "_blank");
+    window.open("/ide/", "_blank");
 
     // Go back to /editor in the current tab
     navigate("/dashboard/Editor");
